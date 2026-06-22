@@ -1,0 +1,1 @@
+Place logo.png, background.jpg and player photos (1.jpg...8.jpg) here.
