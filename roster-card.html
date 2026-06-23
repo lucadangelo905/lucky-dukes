@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Dukes – Roster Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1a1a2e;
+            font-family: "Oswald", sans-serif;
+            padding: 40px 20px;
+        }
+
+        /* ── Card ── */
+        .card {
+            position: relative;
+            width: 460px;
+            background: #55c5ec;
+            overflow: hidden;
+            padding: 24px 24px 28px 28px;
+        }
+
+        /* ── Claw marks (SVG overlay, right side) ── */
+        .claws {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 140px;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        /* ── Top row ── */
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Event info – top left */
+        .event-info {
+            color: white;
+            font-size: 10.5px;
+            font-weight: 500;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            line-height: 1.7;
+        }
+        .event-info .accent { color: #ffd44d; }
+
+        /* Logo – top right */
+        .logo-block {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 6px;
+            margin-right: 50px;
+            flex-shrink: 0;
+        }
+        .logo-name {
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 22px;
+            color: white;
+            letter-spacing: 2px;
+            line-height: 1;
+        }
+        .logo-img {
+            width: 52px;
+            mix-blend-mode: multiply;
+        }
+
+        /* ── Roster ── */
+        .roster {
+            position: relative;
+            z-index: 1;
+            margin-top: 4px;
+        }
+
+        .player {
+            display: flex;
+            align-items: baseline;
+            gap: 14px;
+            padding: 7px 0;
+            border-bottom: 1.5px solid rgba(255,255,255,0.35);
+        }
+        .player:last-child { border-bottom: none; }
+
+        .num {
+            font-size: 17px;
+            font-weight: 600;
+            color: #0b3d6e;
+            min-width: 20px;
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .name {
+            font-size: 36px;
+            font-weight: 700;
+            color: #0b3d6e;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        /* ── Coach ── */
+        .coach {
+            position: relative;
+            z-index: 1;
+            margin-top: 18px;
+            color: #0b3d6e;
+        }
+        .coach-label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+        }
+        .coach-name {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+
+    <!-- Claw scratch marks — three filled tapered wedges -->
+    <svg class="claws" viewBox="0 0 140 700" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Each claw: wide at top, tapering toward bottom, slight curve inward -->
+        <!-- Claw 1 -->
+        <path d="M10 0 L28 0 Q22 350 14 700 Q8 700 2 700 Q10 350 10 0Z" fill="#ffc929"/>
+        <!-- Claw 2 -->
+        <path d="M48 0 L66 0 Q60 350 52 700 Q46 700 40 700 Q48 350 48 0Z" fill="#ffc929"/>
+        <!-- Claw 3 -->
+        <path d="M86 0 L104 0 Q98 350 90 700 Q84 700 78 700 Q86 350 86 0Z" fill="#ffc929"/>
+    </svg>
+
+    <!-- Top row -->
+    <div class="top">
+        <div class="event-info">
+            BEACH WATERPOLO<br>
+            COSTA BRAVA<br>
+            <span class="accent">PALAMOS, SPAIN</span><br>
+            AUGUST 28–30, 2026
+        </div>
+        <div class="logo-block">
+            <span class="logo-name">LUCKY DUKES</span>
+            <img class="logo-img" src="images/logo_black.jpg" alt="Lucky Dukes">
+        </div>
+    </div>
+
+    <!-- Roster -->
+    <div class="roster">
+        <div class="player"><span class="num">1</span><span class="name">D'ANGELO</span></div>
+        <div class="player"><span class="num">2</span><span class="name">RAZZOLINI</span></div>
+        <div class="player"><span class="num">3</span><span class="name">VESEL</span></div>
+        <div class="player"><span class="num">4</span><span class="name">BATTA</span></div>
+        <div class="player"><span class="num">5</span><span class="name">BAVIERA</span></div>
+        <div class="player"><span class="num">6</span><span class="name">AMBROSINI</span></div>
+        <div class="player"><span class="num">7</span><span class="name">BRILLO</span></div>
+        <div class="player"><span class="num">8</span><span class="name">GRANERO MOYA</span></div>
+    </div>
+
+    <!-- Coach -->
+    <div class="coach">
+        <div class="coach-label">COACH:</div>
+        <div class="coach-name">ANDREA QUAGLIO</div>
+    </div>
+
+</div>
+
+</body>
+</html>
