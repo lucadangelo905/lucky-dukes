@@ -1,1 +1,0 @@
-function showPlayer(n,name){popup.style.display='flex';document.getElementById('name').textContent=name;document.getElementById('photo').src='assets/players/'+n+'.jpg';}function closePlayer(){popup.style.display='none';}
